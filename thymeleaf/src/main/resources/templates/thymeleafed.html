@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>index.html with thymeleaf</title>
+	</head>
+  <body>
+	<!-- http://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html#local-variables -->
+	Hello <span th:text="${name}">Julius Ceasar</span>!<br/>
+
+	<br/>
+
+	Persons:<br/>
+	<div th:each="aPerson: ${persons}">
+		Person: <span th:text="${aPerson}"></span>
+	</div>
+
+	<br/>
+
+	Items:<br/>
+	<div th:each="anItem: ${items}">
+		Item: <span th:text="${anItem.key}">Key</span>=<span th:text="${anItem.value}">Key</span>
+	</div>
+  </body>
+</html>
